@@ -1,4 +1,4 @@
-package org.almirsantos;
+package org.almirsantos.producer;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
