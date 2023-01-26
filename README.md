@@ -37,3 +37,17 @@ Para testar, pode ser utilizado o seguinte comando: `./send-order.sh "{\"identif
 ````
 2023-01-26 16:21:05.019  INFO 2103 --- [ntainer#0-0-C-1] b.c.almirsantos.consumer.OrderConsumer  : Order: Order(identifier=12343, customer=Customer X, value=1500)
 ````
+
+
+Log da aplicação Consumer com mapeamento de mensagens "tipadas":
+````
+2023-01-26 17:36:00.546  INFO 4532 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : partitions assigned: [ordertopic-0]
+2023-01-26 17:41:23.413  INFO 4532 --- [ntainer#0-0-C-1] org.almirsantos.consumer.OrderConsumer   : key: 9d1fa0d8-94ce-4d71-a5fd-d54360625b73
+2023-01-26 17:41:23.415  INFO 4532 --- [ntainer#0-0-C-1] org.almirsantos.consumer.OrderConsumer   : Headers: RecordHeaders(headers = [], isReadOnly = false)
+2023-01-26 17:41:23.415  INFO 4532 --- [ntainer#0-0-C-1] org.almirsantos.consumer.OrderConsumer   : Partion: 0
+2023-01-26 17:41:23.416  INFO 4532 --- [ntainer#0-0-C-1] org.almirsantos.consumer.OrderConsumer   : Order: {
+    "identifier": "12343",
+    "customer": "Customer X",
+    "value": 1500
+}
+````
